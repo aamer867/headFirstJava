@@ -4,6 +4,7 @@ public class DotComBust {
     GameHelper helper;
     ArrayList<DotCom> dotComList = new ArrayList<DotCom>();
     int numGuesses = 0;
+    String[] dotComNames;
 
     public void setUpGame() {
 
@@ -12,7 +13,7 @@ public class DotComBust {
             dotComList.add(dotCom);
         }
 
-        String[] dotComNames = new String[dotComList.size()];
+        dotComNames = new String[dotComList.size()];
 
         dotComNames[0] = "<DE>";
         dotComNames[1] = "<US>";
