@@ -18,7 +18,6 @@ public class DotCom {
         if (locationCells.isEmpty()) {
             result = "Kill";
         }
-        System.out.println(result);
         return result;
     } // close method
 }
