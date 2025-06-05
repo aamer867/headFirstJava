@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class DotComNew {
+public class DotCom {
     ArrayList<String> locationCells;
 
     public void setLocationCells(ArrayList<String> locs) {
