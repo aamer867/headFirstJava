@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class DotComNew {
+public class DotCom {
     ArrayList<String> locationCells;
 
     public void setLocationCells(ArrayList<String> locs) {
@@ -18,7 +18,6 @@ public class DotComNew {
         if (locationCells.isEmpty()) {
             result = "Kill";
         }
-        System.out.println(result);
         return result;
     } // close method
 }

@@ -23,5 +23,9 @@ public class Main {
         list.add(2, "E");
 
         System.out.println(list);
+
+        // Check the dotComBust Class:
+        DotComBust dotComBust = new DotComBust();
+        dotComBust.startPlaying();
     }
 }

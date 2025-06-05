@@ -64,10 +64,4 @@ public class GameHelper {
         }
     }
 
-    public static void main(String[] args) {
-        GameHelper helper = new GameHelper();
-        System.out.println(helper.placeDotCom());
-        System.out.println(helper.getUserInput());
-    }
-
 }
