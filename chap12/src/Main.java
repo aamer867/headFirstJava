@@ -1,15 +1,44 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.*;
+import java.util.stream.*;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        /*
+        List<String> strings = List.of("I", "am", "a", "list", "of", "Strings");
+        Stream<String> stream = strings.stream();
+        Stream<String> limit = stream.limit(4);
+        long result = limit.count();
+        System.out.println("result = " + result);
+        */
+
+
+        /*
+        Dog a  = new Dog();
+        a.name = "So";
+        Dog b = new Dog();
+        b.name = "Bob";
+        Dog c = new Dog();
+        c.name = "Cathy";
+        Dog d = new Dog();
+        d.name = "David";
+        List<Dog> dogs = List.of(a, b, c, d);
+        Stream<Dog> dogStream = dogs.stream().sorted().limit(2);
+        System.out.println(dogStream.collect(Collectors.toList()));
+        System.out.println(dogStream);
+         */
+
+        Songs songs = new Songs();
+        List<Song> songsList = songs.getSongs();
+        List<Song> rockList = songsList.stream().filter(
+                (song) -> song.getGenre().equals("Rock")
+        ).toList();
+
+        long rockListCounnt = songsList.stream().distinct().count();
+        System.out.println(rockListCounnt);
+
+        Map<String, Song> songsMap= songsList.stream().distinct().collect(Collectors.toMap(Song::getTitle, (song)->song));
+        System.out.println(songsMap);
+
     }
 }
